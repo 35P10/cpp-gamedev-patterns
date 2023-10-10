@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(Myproject VERSION 0.1.0)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS ON)
 include(CTest)
 enable_testing()
 
@@ -9,8 +12,11 @@ find_package(OpenGL REQUIRED)
 set( DEPENDENCY_DIR 
 ${CMAKE_CURRENT_SOURCE_DIR}/dep)
 
-file(GLOB SOURCES "*.cpp" ${DEPENDENCY_DIR}/include/glad/glad/glad.c )
-file(GLOB HEADERS "*.h" )
+set( SRC_DIR 
+${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+file(GLOB_RECURSE SOURCES ${SRC_DIR}/**/*.cpp "main.cpp" ${DEPENDENCY_DIR}/include/glad/glad/glad.c )
+file(GLOB_RECURSE HEADERS ${SRC_DIR}/**/*.h  HEADERS ${SRC_DIR}**/*.hpp)
 file(GLOB SHADERS "*.vert" "*.frag" "*.vs" "*.fs" )
 
 include_directories( 
@@ -22,7 +28,16 @@ include_directories(
     ${DEPENDENCY_DIR}/include/freeglut
 )
 
-message( "\nBuild mode test is: ${CMAKE_BUILD_TYPE}" )
+message( "\nBuild mode test is: ${CMAKE_BUILD_TYPE} ****************" )
+message("\nArchivos fuente incluidos en el proyecto:")
+foreach(source_file ${SOURCES})
+    message("   ${source_file}")
+endforeach()
+message("\nArchivos HEADERS incluidos en el proyecto:")
+foreach(header_file ${HEADERS})
+    message("   ${header_file}")
+endforeach()
+
 
 if ( CMAKE_BUILD_TYPE STREQUAL "Debug")
     message("\nOpenGL_GLUT_GLFW_Program -- Debug mode ****************")
@@ -46,7 +61,7 @@ else()
 	)
 endif ()
 
-add_executable( ${PROJECT_NAME}  ${HEADERS} ${SOURCES} ${SHADERS} )
+add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} ${SHADERS} )
 
 if ( CMAKE_BUILD_TYPE STREQUAL "Debug")
 	if ( WIN32 )
