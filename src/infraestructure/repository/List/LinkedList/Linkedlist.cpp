@@ -43,6 +43,10 @@ void LinkedList::insert(DataNode x, int posicion) {
     size++;
 }
 
+void LinkedList::pushBack(DataNode data) {
+    this->insert(data,0);
+};
+
 void LinkedList::remove(int posicion) {
     if (posicion > -1 && posicion < size) {
         Node<DataNode>* cont = head;
