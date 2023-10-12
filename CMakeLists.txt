@@ -16,7 +16,7 @@ set( SRC_DIR
 ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 file(GLOB_RECURSE SOURCES ${SRC_DIR}/**/*.cpp "main.cpp" ${DEPENDENCY_DIR}/include/glad/glad/glad.c )
-file(GLOB_RECURSE HEADERS ${SRC_DIR}/**/*.h  HEADERS ${SRC_DIR}**/*.hpp)
+file(GLOB_RECURSE HEADERS ${SRC_DIR}/**/*.h  ${SRC_DIR}**/*.hpp)
 file(GLOB SHADERS "*.vert" "*.frag" "*.vs" "*.fs" )
 
 include_directories( 
@@ -62,6 +62,10 @@ else()
 endif ()
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} ${SHADERS} )
+
+target_include_directories(${PROJECT_NAME}
+    PRIVATE src
+)
 
 if ( CMAKE_BUILD_TYPE STREQUAL "Debug")
 	if ( WIN32 )
