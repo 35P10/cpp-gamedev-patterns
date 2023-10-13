@@ -6,19 +6,25 @@
 
 class Coordinate {
 private:
-    float x = 0;
-    float y = 0;
-    float z = 0;
+    int x = 0;
+    int y = 0;
+    int z = 0;
 public:
     Coordinate();
-    Coordinate(float, float, float);
+    Coordinate(int, int, int);
     ~Coordinate();
-    void setX(float);
-    void setY(float);
-    void setZ(float);
-    float getX() const;
-    float getY() const;
-    float getZ() const;
+    void setX(int);
+    void setY(int);
+    void setZ(int);
+    int getX() const;
+    int getY() const;
+    int getZ() const;
+    void addInX(int);
+    void addInY(int);
+    void addInZ(int);
+
+    Coordinate& operator=(const Coordinate& other);
+
     friend bool operator==(const Coordinate& lhs, const Coordinate& rhs);
     friend std::ostream& operator<<(std::ostream& os, const Coordinate& coord);
 };

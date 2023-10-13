@@ -2,26 +2,38 @@
 
 Coordinate::Coordinate() { }
 
-Coordinate::Coordinate(float x, float y, float z) {
+Coordinate::Coordinate(int x, int y, int z) {
     this->x = x;
     this->y = y;
     this->z = z;
 }
 
-void Coordinate::setX(float newX) {
+void Coordinate::setX(int newX) {
     this->x = newX;
 }
 
-float Coordinate::getX() const {
+int Coordinate::getX() const {
     return this->x;
 }
 
-float Coordinate::getY() const {
+int Coordinate::getY() const {
     return this->y;
 }
 
-float Coordinate::getZ() const {
+int Coordinate::getZ() const {
     return this->z;
+}
+
+void Coordinate::addInX(int add) {
+    this-> x += add;
+}
+
+void Coordinate::addInY(int add) {
+    this-> y += add;
+}
+
+void Coordinate::addInZ(int add) {
+    this-> z += add;
 }
 
 Coordinate::~Coordinate() {}
@@ -33,4 +45,16 @@ bool operator==(const Coordinate& lhs, const Coordinate& rhs) {
 std::ostream& operator<<(std::ostream& os, const Coordinate& coord) {
     os << "Coordinate(" << coord.getX() << ", " << coord.getY() << ", " << coord.getZ() << ")";
     return os;
+}
+
+Coordinate& Coordinate::operator=(const Coordinate& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    this->x = other.x;
+    this->y = other.y;
+    this->z = other.z;
+
+    return *this;
 }

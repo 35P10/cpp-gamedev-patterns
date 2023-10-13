@@ -13,9 +13,13 @@ public:
     LinkedList();
     LinkedList(DataNode x);
     void insert(DataNode x,int posicion);
+    void remove(int posicion); 
 
+    void pushFront(DataNode data) override;
     void pushBack(DataNode data) override;
-    void remove(int posicion) override; 
+    DataNode getFront() override;
+    void popFront() override;
+    void popBack() override;
     int search(DataNode data) override;
     int getSize() override;
     void print() override;

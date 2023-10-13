@@ -43,8 +43,16 @@ void LinkedList::insert(DataNode x, int posicion) {
     size++;
 }
 
+void LinkedList::pushFront(DataNode data) {
+    this->insert(data, 0);
+};
+
 void LinkedList::pushBack(DataNode data) {
-    this->insert(data,0);
+    this->insert(data, this->size + 1);
+};
+
+DataNode LinkedList::getFront() {
+    return head->data;
 };
 
 void LinkedList::remove(int posicion) {
@@ -66,6 +74,14 @@ void LinkedList::remove(int posicion) {
         size--;
     }
 }
+
+void LinkedList::popFront() {
+    this->remove(0);
+};
+
+void LinkedList::popBack() {
+    this->remove(this->size - 1);
+};
 
 int LinkedList::search(DataNode data) {
     int cont = 0;
