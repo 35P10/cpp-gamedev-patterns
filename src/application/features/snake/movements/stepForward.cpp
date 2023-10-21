@@ -1,7 +1,7 @@
 #include "application/models/Snake.h"
 
 void Snake::stepForward() {
-    DataNode head = body.getFront();
+    DataNode head = body->getFront();
     switch (direction)
     {
     case DIR_RIGHT:
@@ -19,6 +19,6 @@ void Snake::stepForward() {
     default:
         break;
     }
-    body.pushFront(head);
-    body.popBack();
+    body->pushFront(head);
+    body->popBack();
 }

@@ -12,6 +12,10 @@ class LinkedList : public Ilist {
 public:
     LinkedList();
     LinkedList(DataNode x);
+    Ilist* clone() override {
+        LinkedList* newList = new LinkedList();
+        return newList;
+    }
     void insert(DataNode x,int posicion);
     void remove(int posicion); 
 

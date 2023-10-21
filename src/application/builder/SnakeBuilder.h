@@ -12,7 +12,7 @@ private:
 public:
     SnakeBuilder() {};
 
-    void BuildBody(Ilist &body);
+    void BuildBody(Ilist* &body);
 };
 
 #endif // SNAKEBUILDER_H

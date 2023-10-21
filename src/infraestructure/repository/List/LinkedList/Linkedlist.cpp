@@ -5,7 +5,6 @@ LinkedList::LinkedList() {
     head = NULL;
 }
 
-
 LinkedList::LinkedList(DataNode x) {
     size = 1;
     head = new Node<DataNode>(x);

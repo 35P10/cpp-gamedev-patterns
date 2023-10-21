@@ -13,9 +13,10 @@
 
 class Snake {
 public:
-    Snake(Ilist& body) : body(body) { 
+    Snake(Ilist* body) : body(body) { 
         builder.BuildBody(this->body);
     }
+    
     void stepForward();
 
     void changeDirection_up();
@@ -25,7 +26,7 @@ public:
 
     void print();
 private:
-    Ilist& body;
+    Ilist* body;
     int direction = DIR_UP;
 
     SnakeBuilder builder;

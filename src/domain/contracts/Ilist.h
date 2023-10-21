@@ -5,6 +5,7 @@
 
 class Ilist {
 public:
+    virtual Ilist* clone() = 0;
     virtual void pushFront(DataNode data) = 0;
     virtual void pushBack(DataNode data) = 0;
     virtual DataNode getFront() = 0;
