@@ -4,7 +4,7 @@
 #include <iostream>
 #include <map>
 
-#include "controller/contracts/IInputController.h"
+#include "contracts/IInputController.h"
 
 class KeyBoardController : public IInputController {
 private:

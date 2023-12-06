@@ -1,9 +1,9 @@
 #ifndef SNAKEBUILDER_H
 #define SNAKEBUILDER_H
 
-#include "domain/models/Coordinate.h"
-#include "domain/models/DataNode.h"
-#include "domain/contracts/Ilist.h"
+#include "core/Coordinate.h"
+#include "core/DataNode.h"
+#include "contracts/Ilist.h"
 
 class SnakeBuilder {
 private:

@@ -1,8 +1,8 @@
 #ifndef INTRAESTRUCTURESERVICES
 #define INTRAESTRUCTURESERVICES
 
-#include "domain/contracts/Ilist.h"
-#include "controller/contracts/IInputController.h"
+#include "contracts/Ilist.h"
+#include "contracts/IInputController.h"
 
 class InfraestructureServices {
 public:

@@ -1,10 +1,10 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-#include "domain/contracts/Ilist.h"
-#include "domain/models/Coordinate.h"
-#include "domain/models/DataNode.h"
-#include "application/builder/SnakeBuilder.h"
+#include "contracts/Ilist.h"
+#include "core/Coordinate.h"
+#include "core/DataNode.h"
+#include "entities/snake/builder/SnakeBuilder.h"
 
 #define DIR_UP 1
 #define DIR_BOTTOM 2

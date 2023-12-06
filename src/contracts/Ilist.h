@@ -1,7 +1,7 @@
 #ifndef ILIST_H
 #define ILIST_H
 
-#include "domain/models/DataNode.h"
+#include "core/DataNode.h"
 
 class Ilist {
 public:

@@ -3,8 +3,8 @@
 #define GAMECONTROLLER_H
 #include <conio.h>
 
-#include "controller/contracts/IInputController.h"
-#include "application/models/Snake.h"
+#include "contracts/IInputController.h"
+#include "entities/snake/Snake.h"
 
 class GameController
 {

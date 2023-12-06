@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string>
 
-#include "domain/models/DataNode.h"
-#include "domain/contracts/Ilist.h"
+#include "core/DataNode.h"
+#include "contracts/Ilist.h"
 #include "Node.h"
 
 class LinkedList : public Ilist {

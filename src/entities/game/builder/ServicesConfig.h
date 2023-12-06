@@ -1,10 +1,10 @@
 #ifndef SERVICESCONFIG
 #define SERVICESCONFIG
 
-#include "infraestructure/repository/List/LinkedList/Linkedlist.h"
-#include "infraestructure/repository/InputControllers/Keyboard/KeyBoardController.h"
-#include "infraestructure/InfraestructureServices.h"
-#include "controller/GameController.h"
+#include "integration/List/LinkedList/Linkedlist.h"
+#include "integration/InputControllers/Keyboard/KeyBoardController.h"
+#include "integration/InfraestructureServices.h"
+#include "entities/game/GameController.h"
 
 class ServicesConfig
 {
