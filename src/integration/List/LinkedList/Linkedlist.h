@@ -26,7 +26,7 @@ public:
     void popBack() override;
     int search(DataNode data) override;
     int getSize() override;
-    void print() override;
+    std::vector<DataNode> print() override;
 
 private:
     Node<DataNode> *head;

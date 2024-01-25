@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
-#include "src/entities/game/builder/ServicesConfig.h"
+#include "src/entities/game/builder/GameBuilder.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
@@ -13,13 +13,14 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main()
 {  
-    ServicesConfig _services;
+    GameBuilder _services;
 
-    GameController* A = _services._gameController;
+    Game* A = _services._gameController;
 
     while (A->checkInput())
     {
         A->snakeEntity();
+        A->render();
     }
     
     

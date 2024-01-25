@@ -96,14 +96,12 @@ int LinkedList::search(DataNode data) {
     return -1;
 }
 
-void LinkedList::print() {
+std::vector<DataNode> LinkedList::print() {
+    std::vector<DataNode> output;
+
     if ((size == 0) && (head == NULL))
     {
-        std::cout << "Lista Vacia\n";
-    }
-    else if ((size == 0) && (head != NULL))
-    {
-        head-> Printnode();
+        ;
     }
     else
     {
@@ -111,9 +109,9 @@ void LinkedList::print() {
 
         while (i != NULL)
         {
-            i-> Printnode();
+            output.push_back(i->getData());
             i = i->next;
         }
-        std::cout << "Tamano: " << this->size << " Head: " << this->head->data.position << std::endl;
     }
+    return output;
 }

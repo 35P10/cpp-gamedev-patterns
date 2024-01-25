@@ -1,13 +1,6 @@
-#include "./GameController.h"
+#include "entities/game/Game.hpp"
 
-GameController::GameController(IInputController* newInput, Snake* newSnake) {
-    input = newInput;
-    snake = newSnake;
-}
-
-GameController::~GameController() {};
-
-bool GameController::checkInput() {
+bool Game::checkInput() {
     if (_kbhit()) {
         int key = _getch();
         if (key == input->action_pause()) {

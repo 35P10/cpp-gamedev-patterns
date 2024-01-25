@@ -2,6 +2,8 @@
 #define ILIST_H
 
 #include "core/DataNode.h"
+#include <iostream>
+#include <vector>
 
 class Ilist {
 public:
@@ -13,7 +15,7 @@ public:
     virtual void popBack() = 0;
     virtual int search(DataNode data) = 0;
     virtual int getSize() = 0;
-    virtual void print() = 0;
+    virtual std::vector<DataNode> print() = 0;
 };
 
 #endif // ILIST_H
