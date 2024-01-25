@@ -2,6 +2,8 @@
 #define IGRAPHIC_H
 
 #include "entities/level/Level.hpp"
+#include "entities/food/Food.hpp"
+
 
 class IGraphic {
 public:

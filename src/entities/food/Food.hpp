@@ -11,7 +11,8 @@ private:
     Coordinate position;
 public:
     Food();
-    Food(Coordinate new_position);
+    Food(std::string newtype, Coordinate new_position);
+    Coordinate getPosition();
     ~Food();
 };
 

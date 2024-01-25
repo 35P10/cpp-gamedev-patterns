@@ -1,11 +1,5 @@
-#ifndef FOODFACTORY_H
-#define FOODFACTORY_H
+#include "entities/food/factory/FoodFactory.hpp"
 
-#include "core/Coordinate.h"
-
-
-class FoodFactory {
-    ;
-};
-
-#endif // FOODFACTORY_H
+Food FoodFactory::generateFoodInPosition(Coordinate new_coordinate) {
+    return Food("Banana", new_coordinate);
+}

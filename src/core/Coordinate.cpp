@@ -8,6 +8,12 @@ Coordinate::Coordinate(int x, int y, int z) {
     this->z = z;
 }
 
+Coordinate::Coordinate(int x, int y) {
+    this->x = x;
+    this->y = y;
+    this->z = 0;
+}
+
 void Coordinate::setX(int newX) {
     this->x = newX;
 }

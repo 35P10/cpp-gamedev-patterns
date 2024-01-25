@@ -5,9 +5,7 @@ Game::Game(IInputController* newInput, Snake* newSnake, IGraphic* newGraphic) {
     snake = newSnake;
     graphic = newGraphic;
     level = new Level();
-    std::cout <<"OK";
     graphic->setEntities(level);
-    std::cout <<"OK2";
 }
 
 Game::~Game() {};

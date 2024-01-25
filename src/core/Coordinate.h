@@ -12,6 +12,7 @@ private:
 public:
     Coordinate();
     Coordinate(int, int, int);
+    Coordinate(int, int);
     ~Coordinate();
     void setX(int);
     void setY(int);
